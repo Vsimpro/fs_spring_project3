@@ -4,8 +4,16 @@ Fullstack course, Spring 2023.
 
 ### How to run:
 Inside `fs_spring_project2` folder 
+Frontend:
 ```bash
-todo
+cd frontend
+npm start
+```
+
+Backend:
+```bash
+cd backend
+node index.js
 ```
 
 

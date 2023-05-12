@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Tests
+*.py
+register.py
+tests.py
+
+# Dependency directories
+node_modules/
+jspm_packages/
+package-lock.json
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+.env.test
