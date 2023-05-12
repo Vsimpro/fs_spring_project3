@@ -3,11 +3,19 @@
     padding-top: 7%;
 }
 
-.handle {
-    font-style: italic;
-    font-size: large;
-    color: #f4dbd6;
+.handle, .my_handle {
     margin-right: 2%;
+    font-size: large;
+    font-style: italic;
+}
+
+.handle {
+    color: var(--rosewater);
+}    
+
+.my_handle {
+    text-decoration: underline;
+    color: var(--green);
 }    
 
 .card {
