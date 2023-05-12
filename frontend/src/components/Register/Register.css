@@ -1,0 +1,66 @@
+button, button:active {
+    width: 210px;
+
+    box-shadow: 0px 0px 12px var(--background_light);
+
+    border-radius: 6px;
+    border:0px solid white;
+
+    padding: 1%;
+
+    background-color: var(--cyan);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+}
+
+input {
+    width: 198px;
+
+    margin: 0;
+    padding: 0;
+
+    padding: 0.5%;
+
+    margin-right: 1%;
+    margin-bottom: 1%;  
+
+    border-radius: 6px;
+
+    background-color: #6e738d;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 2px 2px var(--cyan);
+}
+
+::placeholder {
+    color: var(--text);
+}
+
+.register_form {
+    margin: 0;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+#small_print{
+    font-size: small;
+
+    margin-top: -1%;
+
+    margin-bottom: 3%;
+}
+
+#already_user:hover {
+    color: var(--mauve);
+    text-decoration: underline;
+}
+
+#already_user {
+    margin: 0;
+    padding: 0;
+}
