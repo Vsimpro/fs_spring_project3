@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import Login from "./components/Login/login"
+import Update from "./components/Update/update"
 import Register from "./components/Register/register"
 import NavigationBar from "./components/Navigation/navigationbar";
 
@@ -39,7 +40,10 @@ function App() {
         /* Content modifying */
         case ("update"):
             _html = (
-                <p> Updating site </p>
+                <>
+                    <NavigationBar />
+                    <Update />
+                </>
             )
             break;
 

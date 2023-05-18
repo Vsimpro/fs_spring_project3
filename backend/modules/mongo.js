@@ -45,7 +45,7 @@ class Connection {
             Mongoose.connect( this.uri, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
-            });
+            }); 
 
             console.log("[+] [Mongo] Connection made. ")
 
@@ -138,7 +138,6 @@ class Connection {
 
     // TODO: Update desired data
     async patch(data, id_) {
-
         try {
             await Comment.updateOne(
                 { id : id_ },

@@ -10,7 +10,12 @@ var DATABASE = new Connection()
 
 /* Global Variables */
 const app = express();
-      app.use(cors( {origin: "*" }));
+      app.use(
+        cors( {
+            origin: "http://localhost:3000",
+            methods: ["GET", "POST"],
+            credentials : true
+        }));
       app.use(express.json());
       app.use(cookieParser());
 
@@ -259,6 +264,7 @@ app.post("/api/update/:id", async function(request, response) {
     let cookies = request.cookies;
     
     console.log(`[>] [api] POST '/api/update/${id}'`);
+    console.log( data )
 
     let owner = await is_owner(cookies, id)
     if (!owner) {
