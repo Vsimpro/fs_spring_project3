@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Login from "./components/Login/login"
 import Update from "./components/Update/update"
+import Deletion from "./components/Deletion/deletion"
 import Register from "./components/Register/register"
 import NavigationBar from "./components/Navigation/navigationbar";
 
@@ -49,7 +50,9 @@ function App() {
 
         case ("delete"):
             _html = (
-                <p> Deletion site </p>
+                <>
+                    <Deletion />
+                </>
             )
             break;
         
@@ -58,18 +61,14 @@ function App() {
             _html = (
                 <>
                     <NavigationBar />
-                    <Feed />
                     <div id="main_feed">
                     </div>
+                    <Feed />
                 </>
             )
     }
 
     
-
-    
-
-
     /* Credentials */
     return ( _html )
 }
