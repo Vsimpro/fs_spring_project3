@@ -12,7 +12,12 @@
     --green: #a6da95;
     --mauve: #c6a0f6;
     --lavender: #b7bdf8;
+    --red: #ed8796;
+    --maroon: #ee99a0;
     --rosewater: #f4dbd6;
+    --flamingo: #f0c6c6;
+    --yellow: #eed49f;
+    --peach: #f5a97f;
     
 }
 
@@ -47,7 +52,7 @@ a {
 @media screen and (orientation:landscape) {
     body {
         margin: auto;
-        margin-top: 4%;
+        margin-top: 1%;
 
         padding: 2%;
         padding-top: 1%;
@@ -55,11 +60,5 @@ a {
         padding-bottom: 5%;
 
         width: 600px;
-        border-radius: 6px;
-        border: 1px solid var(--text);
-    
-        box-shadow: 6px 6px 10px var(--background);
-
-        background-color: var(--background_light);
     }
 }

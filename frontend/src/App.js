@@ -12,39 +12,62 @@ import Feed from "./components/Feed/feed";
 
 // Main function
 function App() {
+    var _html;
+    var _location = window.location.pathname
 
-    // Funky naming I know
-    let where_abouts = window.location.pathname
+    // Check only the first dir
+    switch (_location.split("/")[1]) {
+        /* Credentials */
+        case ("login"):
+            _html = (
+                <>
+                    <NavigationBar />
+                    <Login /> 
+                </>
+            );
+            break;
 
-    // Login
-    if (where_abouts === "/login") {
-        return (
-            <>
-                <NavigationBar />
-                <Login /> 
-            </>
-        )
+        case ("signup"):
+            _html = (
+                <>
+                    <NavigationBar />
+                    <Register />
+                </>
+            );
+            break;
+        
+        /* Content modifying */
+        case ("update"):
+            _html = (
+                <p> Updating site </p>
+            )
+            break;
+
+        case ("delete"):
+            _html = (
+                <p> Deletion site </p>
+            )
+            break;
+        
+        // Home by default
+        default:
+            _html = (
+                <>
+                    <NavigationBar />
+                    <Feed />
+                    <div id="main_feed">
+                    </div>
+                </>
+            )
     }
 
-    // Register
-    if (where_abouts === "/signup") {
-        return (
-            <>
-                <NavigationBar />
-                <Register />
-            </>
-        )
-    }
+    
 
-    // Home by default
-    return (
-        <>
-            <NavigationBar />
-            <Feed />
-            <div id="main_feed">
-            </div>
-        </>
-    )
+    
+
+
+    /* Credentials */
+    return ( _html )
 }
 
 export default App;

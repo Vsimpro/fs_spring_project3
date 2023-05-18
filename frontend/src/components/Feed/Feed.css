@@ -1,6 +1,12 @@
-.feed {
-    margin: 0;
-    padding-top: 7%;
+#main_feed {
+
+    margin-left: 1%;
+
+    /* 
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to top, var(--red), var(--maroon), var(--flamingo), var(--peach), var(--yellow)) 1;
+    */
 }
 
 .handle, .my_handle {
@@ -14,16 +20,48 @@
 }    
 
 .my_handle {
+    margin: 0;
+    margin-right: 2%;
+
     text-decoration: underline;
     color: var(--green);
 }    
 
+.user_handle {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5%;
+}
+
+.handlebar {
+   font-size: small;
+   margin: 0;
+   margin-top: 1%;
+   margin-left: 1%;
+
+   color: #5b6078;
+}
+
+.handlebar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--blue);
+ }
+ 
+
 .card {
-    width: 90%;
+    width: 93%;
 
-    margin-bottom: 2px;
+    margin-left: 3%;
+    margin-bottom: 1%;
 
-    padding-left: 1%;
+    padding-left:   1%;
+    padding-bottom: 1%;
 
-    border-bottom: 1px solid var(--text);    
+    border-radius: 2px;
+    xborder: 1px solid var(--text);
+    
+    box-shadow: 6px 6px 12px var(--background);
+
+    background-color: var(--background_light);
 }

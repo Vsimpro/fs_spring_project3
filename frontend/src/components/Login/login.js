@@ -17,7 +17,7 @@ async function post_login(name_, password_) {
             (xhr.status !== 418) ) {
         
             set_cookie(name_, password_)
-            console.log( "Login Success" )
+            window.location.href = "/"
             return 0;
         }
 

@@ -13,6 +13,13 @@ npm start
 Backend:
 ```bash
 cd backend
+
+npm install cors
+npm install dotenv
+npm install express
+npm install mongoose
+npm install cookie-parser
+
 node index.js
 ```
 
