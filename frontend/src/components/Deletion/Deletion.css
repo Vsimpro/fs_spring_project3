@@ -20,18 +20,17 @@
     background-image: linear-gradient(to right, var(--red), var(--peach));
 }
 
+.cancel:hover {
+    background-image: linear-gradient(to left, var(--red), var(--maroon));;
+}
+
+
 .confirm {
     margin: 0;
     margin-right: 2%;
     background-image: linear-gradient(to left, var(--green), var(--cyan));
 }
 
-.cancel:hover {
-    box-shadow: 1px 2px 8px var(--maroon);
-}
-
 .confirm:hover {
-
-    box-shadow: 0px 2px 8px var(--blue);
-
+    background-image: linear-gradient(to left, var(--cyan), var(--blue));
 }

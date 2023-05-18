@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Login from "./components/Login/login"
 import Update from "./components/Update/update"
+import Status from "./components/Status/status"
 import Deletion from "./components/Deletion/deletion"
 import Register from "./components/Register/register"
 import NavigationBar from "./components/Navigation/navigationbar";
@@ -61,6 +62,8 @@ function App() {
             _html = (
                 <>
                     <NavigationBar />
+                    <div className="status_update" />
+                    <Status />
                     <div id="main_feed">
                     </div>
                     <Feed />
