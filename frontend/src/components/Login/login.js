@@ -8,7 +8,7 @@ function set_cookie(name_, password_) {
 
 async function post_login(name_, password_) {
     var xhr = new XMLHttpRequest();
-    var url = "http://localhost:4321/api/login";
+    var url = "/api/login";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function() {
@@ -22,6 +22,7 @@ async function post_login(name_, password_) {
         }
 
         // TODO: Trigger Error in front;
+        alert("Could not log in. Make sure you have correct credentials")
         return null
     }
     

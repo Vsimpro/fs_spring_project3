@@ -40,7 +40,7 @@ function send_message() {
     var xhr = new XMLHttpRequest();
 
     try {
-        xhr.open("POST", "http://localhost:4321/api/add", true);
+        xhr.open("POST", "/api/add", true);
         xhr.withCredentials = true;
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {

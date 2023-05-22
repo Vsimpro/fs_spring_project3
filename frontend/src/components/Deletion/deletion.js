@@ -13,7 +13,29 @@ try {
 }
 
 function delete_message() {
-    // Todo: Send deletion.
+    var xhr = new XMLHttpRequest();
+
+    try {
+
+        xhr.open("POST", `/api/delete/${id}`, true);
+        xhr.withCredentials = true;
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function() {
+            if ((xhr.status === 401) || 
+                (xhr.status === 403) || 
+                (xhr.status === 418) ) {
+
+                alert( "Something went wrong" )
+                return;
+            }
+        }
+    
+        xhr.send();
+
+    } catch (e) {
+        console.log( e )
+    }
+
     go_back()
 }
 
@@ -80,7 +102,7 @@ export default function deletion() {
         <>
         <div className="confirmation_box">
             <h1> Are you certain you want to delete this post? </h1>
-            <p> It will be lost for ever! (a long time.) </p>
+            <p> It will be lost forever! (a long time.) </p>
 
             <div id="card" />
 

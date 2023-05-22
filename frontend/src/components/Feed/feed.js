@@ -97,11 +97,14 @@ export default function Feed() {
 
     // API request to get all of the messages.
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:4321/api/getall")
+    xhr.open("GET", "/api/getall")
     xhr.onload = function () {
-
-        const data = JSON.parse(xhr.responseText);
-
+        var data = "";
+        try {
+            data = JSON.parse(xhr.responseText);
+        } catch (e) {
+            console.log( "couldn't fetch data" )
+        }
         // Go throught the data and create cards for each message.
         for (let i = 0; i < data.length; i++) {
             
@@ -125,3 +128,5 @@ export default function Feed() {
     // Return no HTML: do everything with DOM.
     return (null);
 }
+
+export { create_card, check_cookies }

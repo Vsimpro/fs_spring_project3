@@ -1,0 +1,24 @@
+.ID, .text {
+    margin-right: 1%;
+}
+
+.text {
+    background-image: linear-gradient(to right, var(--red), var(--peach),  var(--peach));
+}
+
+.text:hover {
+    background: var(--peach);
+}
+
+.ID {
+    background: linear-gradient(to right, var(--blue), var(--green), var(--green) ); 
+}
+
+.ID:hover {
+    background:  var(--green) ; 
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: var(--background_lightest);
+}

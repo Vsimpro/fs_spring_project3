@@ -5,6 +5,7 @@ import Login from "./components/Login/login"
 import Update from "./components/Update/update"
 import Status from "./components/Status/status"
 import Deletion from "./components/Deletion/deletion"
+import Search from "./components/Search/search"
 import Register from "./components/Register/register"
 import NavigationBar from "./components/Navigation/navigationbar";
 
@@ -35,6 +36,15 @@ function App() {
                 <>
                     <NavigationBar />
                     <Register />
+                </>
+            );
+            break;
+
+        case ("search"):
+            _html = (
+                <>
+                    <NavigationBar />
+                    <Search />
                 </>
             );
             break;

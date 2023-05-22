@@ -13,7 +13,7 @@ try {
 
 function get_message() {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://localhost:4321/api/id/${_id}`);
+    xhr.open('GET', `/api/id/${_id}`);
     xhr.onload = function() {
         if (xhr.status === 200) { 
             var _data = JSON.parse( xhr.responseText ) 

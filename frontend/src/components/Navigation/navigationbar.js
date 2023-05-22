@@ -7,6 +7,7 @@ export default function NavigationBar() {
             <a href="/"       className="active">home</a>
             <a href="/login"  className="active">login</a>
             <a href="/signup" className="active">register</a>
+            <a href="/search" className="active">search</a>
             </p>
         </div>
     )
