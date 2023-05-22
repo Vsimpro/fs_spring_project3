@@ -7,6 +7,7 @@ Single page designed frontend with a MongoDB backend. :)
 ### How to run:
 Inside `fs_spring_project2` folder you should be able to run:
 ```
+npm install
 npm start
 ```
 
