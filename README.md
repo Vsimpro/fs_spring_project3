@@ -1,26 +1,13 @@
 # Project 3
 Fullstack course, Spring 2023.
 ## Social media site that allows users to post, edit & delete status updates
+Register a new account, or log in to an existing one and post a status update!
+Single page designed frontend with a MongoDB backend. :)
 
 ### How to run:
-Inside `fs_spring_project2` folder 
-Frontend:
-```bash
-cd frontend
-npm start
+Inside `fs_spring_project2` folder you should be able to run:
 ```
-
-Backend:
-```bash
-cd backend
-
-npm install cors
-npm install dotenv
-npm install express
-npm install mongoose
-npm install cookie-parser
-
-node index.js
+npm start
 ```
 
 
