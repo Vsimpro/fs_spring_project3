@@ -24,14 +24,16 @@ let PORT = process.env.PORT
 
 /* Functions */
 // check_permission : returns true if action is allowed, false if not.
-function check_permission(token) {
+async function check_permission(token) {
     // if neither is present in the token, deny access.
     if ( (!token["username"]) && (!token["password"]) ) {
         return false;
     }
 
-    let exists = find_user(token)
-    if ((exists != null) || (exists != false)) {
+    let exists = await find_user(token)
+
+    if (exists != null) {
+        console.log( exists )
         return true;
     }
 
@@ -46,12 +48,12 @@ async function find_user(token) {
     let passwd = token["password"]
 
     let user_in_db = await DATABASE.fetch_users(user, passwd);
-
     if (user_in_db == null) {
         return null;
     }
 
-    if (user_in_db["username"] == token["username"]) {
+    if ((user_in_db["username"] == token["username"]) 
+     && (user_in_db["password"] == token["password"])){
         return user;
     }
 
@@ -101,6 +103,10 @@ async function delete_comment(id) {
 // is_owner : check if user owns the resource 
 async function is_owner(token, id) {
     let comments = await DATABASE.fetch_comments()
+
+    if (find_user(token)["username"] == null) {
+        return false;
+    }
 
     for (let i = 0; i < comments.length; i++) {
         if ((comments[i]["id"] == id) && 
@@ -230,7 +236,7 @@ app.post("/api/register", async function(request, response) {
 
 /* Auth Locked */
 // /api/add : add a new comment if auth key allows it. POST
-app.post("/api/add/", function(request, response) {
+app.post("/api/add/", async function(request, response) {
     let data = request.body
     let cookies = request.cookies;
 
@@ -242,8 +248,7 @@ app.post("/api/add/", function(request, response) {
             return 1;
         }
 
-    if (check_permission(cookies)) {
-        
+    if (await check_permission(cookies)) {
         DATABASE.post({
             "username" : cookies["username"],
             "message"  : data["message"],
