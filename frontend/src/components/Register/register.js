@@ -1,11 +1,5 @@
 import "./Register.css"
 
-function set_cookie(name_, password_) {
-    document.cookie =  `username=${name_}`
-    document.cookie =  `password=${password_}`
-}
-
-
 function button() {
 
     let username_ = document.getElementsByName("Username")[0].value
