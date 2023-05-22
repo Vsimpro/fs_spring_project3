@@ -1,8 +1,8 @@
 {
     "scripts": {
         "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
-        "start:frontend": "cd frontend && npm install && npm start",
-        "start:backend": "cd backend   && npm install && node index.js"
+        "start:backend": "cd backend   && npm install && node index.js",
+        "start:frontend": "cd frontend && npm install && npm start"
       }
   }
   
